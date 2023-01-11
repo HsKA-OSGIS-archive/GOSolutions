@@ -28,7 +28,8 @@ const map = new Map({
   }),
 });
 (async () => {
-  const airports = await fetch('https://demo.ldproxy.net/zoomstack/collections/airports/items?limit=100', {
+  //const airports = await fetch('https://demo.ldproxy.net/zoomstack/collections/airports/items?limit=100', {
+  const airports = await fetch('http://localhost:8080/geoserver-2.23/ogc/features/collections/tiger:poi/items', {
     headers: {
       'Accept': 'application/geo+json'
     }
