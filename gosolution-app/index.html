@@ -1,18 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>GOSolution</title>
     <meta charset="UTF-8">
-    <title>GoSolution</title>
-    <link rel="stylesheet" href="node_modules/ol/ol.css">
+       <link rel="stylesheet" href="node_modules/ol/ol.css">
+    
     <style>
-      .map {
+            .map {
         width: 80%;
-        height: 600px;
+        height: 500px;
+        position: center;
       }
+            .header {
+        padding: 20px; /* some padding */
+        text-align: center; /* center the text */
+        background: #92b4d3; /* green background */
+        color: white; /* white text color */
+      }
+
+            /* Style the top navigation bar */
+            .navbar {
+        overflow: hidden; /* Hide overflow */
+        background-color: #333; /* Dark background color */
+      }
+
+            /* Style the navigation bar links */
+            .navbar a {
+        float: left; /* Make sure that the links stay side-by-side */
+        display: block; /* Change the display to block, for responsive reasons (see below) */
+        color: white; /* White text color */
+        text-align: center; /* Center the text */
+        padding: 14px 20px; /* Add some padding */
+        text-decoration: none; /* Remove underline */
+      }     
+            /* Right-aligned link */
+            .navbar a.right {
+        float: right; /* Float a link to the right */
+      }
+
+            /* Change color on hover/mouse-over */
+            .navbar a:hover {
+        background-color: #ddd; /* Grey background color */
+        color: black; /* Black text color */
+      }
+
+            * {
+        box-sizing: border-box;
+      }
+
+            /* Column container */
+            .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+            /* Create two unequal columns that sits next to each other */
+
+            /* Sidebar/left column */
+            .side {
+        width: 20%; /* Set the width of the sidebar */
+        background-color: #baccdd; /* Grey background color */
+        padding: 20px; /* Some padding */
+      }
+        
+          /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 700px) {
+            .row {
+        flex-direction: column;
+        }
+      }
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+      @media screen and (max-width: 400px) {
+            .navbar a {
+        float: none;
+        width: 100%;
+        }
+      }
+            .footer {
+        padding: 20px; /* Some padding */
+        text-align: center; 
+        background: #ddd; /* Grey background */
+      }
+            .About_the_Team {
+        float: left;
+        width: 48%;
+        margin: 1%; 
+      }
+            .Contact p {
+        word-break: break-all;
+      }
+
+
+
     </style>
   </head>
+
   <body>
-    <div id="map" class="map"></div>
+    <div class="header">
+      <h1> GOSolution </h1>
+      <h2>Hourly Gamma Dose Rates:</h2>
+    </div>
+    
+    <div class="navbar">
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#" class="right">Link</a>
+    </div>
+
+        
+    <div class="row">
+      <div id="map" class="map"></div>
+      <div class="side">...</div>
+      
+    </div>
+
+    
+    <div class="footer">
+      <div class="About_the_Team">
+          <h4>About the Team</h4>
+          <p>
+            The GOSolutions Team consists of four college mates, who had one common goal,
+            to comtribute to open source!<br/>
+            Felipe Vasquz, Caden Wells, Ataullah Eliacy and Max Kirsch   
+          </p>
+      </div>
+      <div class="Contact">
+          <h4> Contact:</h4>
+          <p>
+          E-mail:gosolutions@xxx.xx<br/> 
+          Phone: xxx.xxxxxxxx<br/>
+          github:https://github.com/HsKA-OSGIS/GOSolutions
+
+          </p>
+      </div>  
+    </div>
+    
+
     <!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css"/>
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
@@ -20,4 +145,3 @@
     <script type="module" src="main.js"></script>
   </body>
 </html>
-
