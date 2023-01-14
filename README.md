@@ -13,7 +13,7 @@ NOT FINAL -- Subject to changes based on final build.
 
 ### Back End
 To host this project locally:
-1. Follow the "Install in 5 minutes" [guide](http://pygeoapi.io/) for pygeoapi, but don't change the ```config-example.yml```. Instead, use the ```config-example.yml``` provided in this directory, but don't run the server yet. pygeoapi requires OGR to use data hosted from a WFS, so using this repository's ```config-example.yml``` will cause an error. 
+1. Follow the "Install in 5 minutes" [guide](http://pygeoapi.io/) for pygeoapi, but don't change the ```config-example.yml```. Instead, use the ```config-example.yml``` provided in this directory, but don't run the server yet. pygeoapi requires OGR to use data hosted from a WFS, so using this repository's ```config-example.yml``` will cause an error without it. 
 2. Download the correct gdal wheel file for your specific version of python and operating system from [Christoph Gohlke's website](https://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal).
 3. Navigate in console to the location of the wheel file from the previous step, and install with the following command:
 ```
@@ -31,9 +31,9 @@ The front end of this project should work with any data hosted on an OGC API. Si
 ## Project Documentation
 Describe development process here
 ## Authors
-[Max Kirsch](https://github.com/Max25832)
-[Caden Wells]()
-[Felipe Vasquez](https://github.com/f-vasquez-tavera)
-[Ataullah Eliacy]()
+- [Max Kirsch](https://github.com/Max25832)
+- [Caden Wells]()
+- [Felipe Vasquez](https://github.com/f-vasquez-tavera)
+- [Ataullah Eliacy]()
 ## Acknowledgement
 ## License
