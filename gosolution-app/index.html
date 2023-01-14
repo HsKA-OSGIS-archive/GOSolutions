@@ -4,21 +4,24 @@
     <title>GOSolution</title>
     <meta charset="UTF-8">
        <link rel="stylesheet" href="node_modules/ol/ol.css">
+       <link rel="Ol_styles" href="">
+
     
     <style>
             .map {
-        width: 80%;
+        width: 85%;
         height: 500px;
         position: center;
       }
             .header {
         padding: 20px; /* some padding */
         text-align: center; /* center the text */
-        background: #92b4d3; /* green background */
+        background: #115696; /* green background */
         color: white; /* white text color */
       }
 
-            /* Style the top navigation bar */
+            /* Style the top na
+            igation bar */
             .navbar {
         overflow: hidden; /* Hide overflow */
         background-color: #333; /* Dark background color */
@@ -58,7 +61,7 @@
 
             /* Sidebar/left column */
             .side {
-        width: 20%; /* Set the width of the sidebar */
+        width: 15%; /* Set the width of the sidebar */
         background-color: #baccdd; /* Grey background color */
         padding: 20px; /* Some padding */
       }
@@ -112,7 +115,10 @@
         
     <div class="row">
       <div id="map" class="map"></div>
-      <div class="side">...</div>
+      <div class="side">
+        <h2>Legend:</h2>
+        <img src="media/legend.jpeg">
+      </div>
       
     </div>
 
@@ -128,6 +134,7 @@
       </div>
       <div class="Contact">
           <h4> Contact:</h4>
+
           <p>
           E-mail:gosolutions@xxx.xx<br/> 
           Phone: xxx.xxxxxxxx<br/>
@@ -138,9 +145,11 @@
     </div>
     
 
-    <!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
+    <!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer 
+    This is the styles from BFS
+      <link rel="stylesheet" href="https://www.imis.bfs.de/geoportal/resources/lib/npm-libs/geostyler/browser/geostyler.css" type="text/css"/>-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css"/>
-    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+   <!-- <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>-->
     <script src="https://unpkg.com/elm-pep@1.0.6/dist/elm-pep.js"></script>
     <script type="module" src="main.js"></script>
   </body>
