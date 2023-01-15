@@ -13,6 +13,25 @@
         height: 500px;
         position: center;
       }
+
+      #map {
+        position: relative;
+      }
+
+      #info {
+        z-index: 1;
+        opacity: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 20;
+        background: rgba(0,60,136,0.7);
+        color: white;
+        border: 0;
+        transition: opacity 100ms ease-in;
+      }
+
+
             .header {
         padding: 20px; /* some padding */
         text-align: center; /* center the text */
@@ -114,12 +133,13 @@
 
         
     <div class="row">
-      <div id="map" class="map"></div>
+      <div id="map" class="map"> 
+        <pre id="info"/>
+      </div>
       <div class="side">
         <h2>Legend:</h2>
         <img src="media/legend.jpeg">
-      </div>
-      
+      </div>  
     </div>
 
     
@@ -145,12 +165,12 @@
     </div>
     
 
-    <!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer 
-    This is the styles from BFS
-      <link rel="stylesheet" href="https://www.imis.bfs.de/geoportal/resources/lib/npm-libs/geostyler/browser/geostyler.css" type="text/css"/>-->
+    <!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css"/>
    <!-- <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>-->
     <script src="https://unpkg.com/elm-pep@1.0.6/dist/elm-pep.js"></script>
     <script type="module" src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/elm-pep@1.0.6/dist/elm-pep.js"></script>
+    
   </body>
 </html>

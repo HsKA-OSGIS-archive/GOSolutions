@@ -62,127 +62,140 @@ const map = new Map({
       features: pointFeatures,
       }),
 //styling of the Point Features by their Value 
-      style: function(feature, resolution){
-        var lessthan008 = new Style( {
-            image: new Circle( {
-                radius: 5,
-                fill: new Fill( {
-                    color: 'rgba(47, 214, 26, 0.5)',
-                    opacity: 0.6                        
-                } ),
-                stroke: new Stroke({
-                    color: 'rgba(47, 214, 26, 1)',
-                    width: 1,
-                  })
-            } )
-        } );
+style: function(feature, resolution){
+    var lessthan008 = new Style( {
+        image: new Circle( {
+            radius: 5,
+            fill: new Fill( {
+                color: 'rgba(47, 214, 26, 0.5)',
+                opacity: 0.6                        
+            } ),
+            stroke: new Stroke({
+                color: 'rgba(47, 214, 26, 1)',
+                width: 1,
+              })
+        } )
+    } );
 
-        var morethan008 = new Style( {
-            image: new Circle( {
-                radius: 5,
-                fill: new Fill( {
-                    color: "rgba(188, 248, 113, 0.5)",
-                } ),
-                stroke: new Stroke({
-                    color: 'rgba(188, 248, 113, 1)',
-                    width: 1,
-                  })
-            } )
-        } );
-        var morethan011 = new Style( {
-            image: new Circle( {
-                radius: 5,
-                fill: new Fill( {
-                    color: "rgba(244, 248, 72, 0.5)",
-                } ),
-                stroke: new Stroke({
-                    color: 'rgba(244, 248, 72, 1)',
-                    width: 1,
-                  })
-            } )
-        } );
-        var morethan014 = new Style( {
-            image: new Circle( {
-                radius: 5,
-                fill: new Fill( {
-                    color: "rgba(212, 195, 6, 0.5)",
-                } ),
-                stroke: new Stroke({
-                    color: 'rgba(212, 195, 6, 1)',
-                    width: 1,
-                  })
-            } )
-        } );
-        var morethan017 = new Style( {
-            image: new Circle( {
-                radius: 5,
-                fill: new Fill( {
-                    color: "rgba(245, 166, 35, 0.5)",
-                } ),
-                stroke: new Stroke({
-                    color: 'rgba(245, 166, 35, 1)',
-                    width: 1,
-                  })
-            } )
-        } );
-        var morethan02 = new Style( {
-            image: new Circle( {
-                radius: 5,
-                fill: new Fill( {
-                    color: "rgba(223, 112, 48, 0.5)",
-                } ),
-                stroke: new Stroke({
-                    color: 'rgba(223, 112, 48, 1)',
-                    width: 1,
-                  })
-            } )
-        } );
-        var morethan04 = new Style( {
-            image: new Circle( {
-                radius: 5,
-                fill: new Fill( {
-                    color: "rgba(209, 72, 13, 0.5)",
-                } ),
-                stroke: new Stroke({
-                    color: 'rgba(209, 72, 13, 1)',
-                    width: 1,
-                  })
-            } )
-        } );
-        var morethan06 = new Style( {
-            image: new Circle( {
-                radius: 5,
-                fill: new Fill( {
-                    color: "rgba(208, 2, 27, 0.5)",
-                } ),
-                stroke: new Stroke({
-                    color: 'rgba(208, 2, 27, 1)',
-                    width: 1,
-                  })
-  
-            } )
-        } );
-        
-        if ( feature.get('value') <= 0.08) {
-            return [lessthan008];
-        } else if(0.11 < feature.get('value') > 0.08) {
-            return[morethan008];
-        } else if(0.14 < feature.get('value') > 0.11) {
-            return[morethan011];
-        } else if(0.14 < feature.get('value') > 0.14) {
-            return[morethan014];
-        } else if(0.02 < feature.get('value') > 0.17) {
-            return[morethan017];
-        } else if(0.04 < feature.get('value') > 0.02) {
-            return[morethan02];
-        } else if(0.06 < feature.get('value') > 0.04) {
-            return[morethan04];
-        } else {
-            return [morethan06];
-        }
+    var morethan008 = new Style( {
+        image: new Circle( {
+            radius: 5,
+            fill: new Fill( {
+                color: "rgba(188, 248, 113, 0.5)",
+            } ),
+            stroke: new Stroke({
+                color: 'rgba(188, 248, 113, 1)',
+                width: 1,
+              })
+        } )
+    } );
+    var morethan011 = new Style( {
+        image: new Circle( {
+            radius: 5,
+            fill: new Fill( {
+                color: "rgba(244, 248, 72, 0.5)",
+            } ),
+            stroke: new Stroke({
+                color: 'rgba(244, 248, 72, 1)',
+                width: 1,
+              })
+        } )
+    } );
+    var morethan014 = new Style( {
+        image: new Circle( {
+            radius: 5,
+            fill: new Fill( {
+                color: "rgba(212, 195, 6, 0.5)",
+            } ),
+            stroke: new Stroke({
+                color: 'rgba(212, 195, 6, 1)',
+                width: 1,
+              })
+        } )
+    } );
+    var morethan017 = new Style( {
+        image: new Circle( {
+            radius: 5,
+            fill: new Fill( {
+                color: "rgba(245, 166, 35, 0.5)",
+            } ),
+            stroke: new Stroke({
+                color: 'rgba(245, 166, 35, 1)',
+                width: 1,
+              })
+        } )
+    } );
+    var morethan02 = new Style( {
+        image: new Circle( {
+            radius: 5,
+            fill: new Fill( {
+                color: "rgba(223, 112, 48, 0.5)",
+            } ),
+            stroke: new Stroke({
+                color: 'rgba(223, 112, 48, 1)',
+                width: 1,
+              })
+        } )
+    } );
+    var morethan04 = new Style( {
+        image: new Circle( {
+            radius: 5,
+            fill: new Fill( {
+                color: "rgba(209, 72, 13, 0.5)",
+            } ),
+            stroke: new Stroke({
+                color: 'rgba(209, 72, 13, 1)',
+                width: 1,
+              })
+        } )
+    } );
+    var morethan06 = new Style( {
+        image: new Circle( {
+            radius: 5,
+            fill: new Fill( {
+                color: "rgba(208, 2, 27, 0.5)",
+            } ),
+            stroke: new Stroke({
+                color: 'rgba(208, 2, 27, 1)',
+                width: 1,
+              })
+
+        } )
+    } );
+    
+    if ( feature.get('value') <= 0.08) {
+        return [lessthan008];
+    } else if(0.11 >= feature.get('value') > 0.08) {
+        return[morethan008];
+    } else if(0.14 >= feature.get('value') > 0.11) {
+        return[morethan011];
+    } else if(0.14 >= feature.get('value') > 0.14) {
+        return[morethan014];
+    } else if(0.2 >= feature.get('value') > 0.17) {
+        return[morethan017];
+    } else if(0.4 >= feature.get('value') > 0.2) {
+        return[morethan02];
+    } else if(0.6 >= feature.get('value') > 0.4) {
+        return[morethan04];
+    } else {
+        return [morethan06];
     }
-});
+}});
 //adding of the Vector Layer to the Map
-map.addLayer(layerFeature)
+map.addLayer(layerFeature);
+map.on('pointermove', showInfo);
+
+const info = document.getElementById('info');
+function showInfo(event) {
+  const features = map.getFeaturesAtPixel(event.pixel);
+  if (features.length == 0) {
+    info.innerText = '';
+    info.style.opacity = 0;
+    return;
+  }
+  const properties = features[0].get( "value");
+  info.innerText = JSON.stringify(properties , null, 2);
+  info.style.opacity = 1;
+}
 
 })();
