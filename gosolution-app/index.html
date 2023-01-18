@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>GOSolution</title>
-    <meta charset="UTF-8">
-       <link rel="stylesheet" href="node_modules/ol/ol.css">
-       <link rel="Ol_styles" href="">
+<html lang="en"  style="font-family:verdana;">
 
-    
+<head>
+  <title>GOSolution</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="node_modules/ol/ol.css">
+  <link rel="Ol_styles" href="">
+
+</head>
+
+
     <style>
             .map {
-        width: 85%;
-        height: 500px;
+        width: 82%;
+        height: 600px;
         position: center;
+
       }
 
             .header {
@@ -26,6 +30,7 @@
             .navbar {
         overflow: hidden; /* Hide overflow */
         background-color: #333; /* Dark background color */
+        border: 2px solid #0d81ed;
       }
 
             /* Style the navigation bar links */
@@ -62,9 +67,11 @@
 
             /* Sidebar/left column */
             .side {
-        width: 15%; /* Set the width of the sidebar */
+        width: 18%; /* Set the width of the sidebar */
         background-color: #baccdd; /* Grey background color */
         padding: 20px; /* Some padding */
+        border: 3px solid #0d81ed;
+
       }
         
           /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
@@ -81,19 +88,21 @@
         width: 100%;
         }
       }
+
+
             .footer {
         padding: 20px; /* Some padding */
-        text-align: center; 
+        display: table;
+        width: 100%;
+        table-layout: fixed; 
         background: #ddd; /* Grey background */
       }
-            .About_the_Team {
-        float: left;
-        width: 48%;
-        margin: 1%; 
-      }
-            .Contact p {
-        word-break: break-all;
-      }
+            .footer span{
+        display: table-cell;
+        text-align: center;
+        padding: 10px;
+            }
+          
 
 /* Popup Layout*/
 .overlay-container{
@@ -170,19 +179,22 @@
             }
 
     </style>
-  </head>
+
 
   <body>
     <div class="header">
-      <h1> GOSolution </h1>
-      <h2>Hourly Gamma Dose Rates:</h2>
+      <img src="media/Logo.png" height="130xp" width="130xp" style="float:left;">
+      <div class="titles">
+        <h2> GOSolution </h2>
+        <h3>Hourly Gamma Dose Rates:</h3>
+      </div>
     </div>
     
     <div class="navbar">
-      <a href="#">Link</a>
-      <a href="#">Link</a>
-      <a href="#">Link</a>
-      <a href="#" class="right">Link</a>
+      <a href="https://www.imis.bfs.de/geoportal/">Original Data</a>
+      <a href="https://ogcapi.ogc.org/">OGC API Documentation</a>
+      <a href="https://github.com/HsKA-OSGIS/GOSolutions" class="right">Our GitHub</a>
+      
     </div>
 
         
@@ -191,39 +203,59 @@
       <div id="map" class="map"></div>
       <div class="side">
         <div class="Legend">
-          <h2>Legend:</h2>
+          <h3 >Legend:</h3>
           <img src="media/legend.jpeg">
         </div>
-        <br>
+        
         <div class="LayerSwitch">
-          <h2>Layers</h2>
+          <h3 style="font-family:verdana;">Layers</h3>
           <input type="radio" name="baseLayerRadioButton" value="OSMStandard" checked>OSM Standard<br>
           <input type="radio" name="baseLayerRadioButton" value="BlueMarble" >Blue Marble
         </div>
-      </div> 
-
+       
+        
+      </div>
     </div>
 
     
-    <div class="footer">
-      <div class="About_the_Team">
-          <h4>About the Team</h4>
-          <p>
+    <div class="footer" style="font-size: x-small; color: #666;">
+      <span class="About_the_Team">
+         <h4 style="color:  #444">About the Team</h4>
+         <p style="text-align: justify">
             The GOSolutions Team consists of four college mates, who had one common goal,
             to comtribute to open source!<br/>
             Felipe Vasquz, Caden Wells, Ataullah Eliacy and Max Kirsch   
           </p>
-      </div>
-      <div class="Contact">
-          <h4> Contact:</h4>
+      </span>
 
-          <p>
-          E-mail:gosolutions@xxx.xx<br/> 
-          Phone: xxx.xxxxxxxx<br/>
-          github:https://github.com/HsKA-OSGIS/GOSolutions
-
+      <span class="projectDetails">
+          <h4 style="color:  #444">About the Project:</h4>
+          <p style="text-align: justify"> This Webpage displays hourly updated gamma doese rate from over 1400 measurement stations in Germany. The data source is the the Webpage of the <a rel="bfs" href="https://www.imis.bfs.de/geoportal/">Bundesamt für Strahlenschutz.</a><br>
+            The Bnifit of ths Website is, that our data is projected via the <a href="https://ogcapi.ogc.org/features/">new OGC API-Feature standard</a> in place of the WFS standard. Thus, this webpage and the associated open documentation can provide a model for future implementations of this new OGC Standard. For further information about the new OGC API standard, follow the link on the top menu bar.      
+                  
+          
           </p>
-      </div>  
+      </span>  
+
+      <span class="licensing">
+        <h4 style="color:  #444"> Licenses:</h4>
+        <p style="text-align: justify">
+        All code runs under the following licenses: <br> 
+        Open Layers:&nbsp; BSD 2-Clause License<br/> 
+        PygeoApi:&emsp;&emsp; MIT License<br/>
+        GoSolutions:&ensp;&nbsp;MIT License
+        </p>
+      </span>  
+
+      <span class="Contact">
+        <h4 style="color:  #444"> Contact:</h4>
+        <p style="text-align: justify">
+        E-mail:gosolutions@xxx.xx<br/> 
+        Phone: xxx.xxxxxxxx<br/>
+        github:<a href="https://github.com/HsKA-OSGIS/GOSolutions" >https://github.com/HsKA-OSGIS/GOSolutions</a>
+
+        </p>
+      </span>  
     </div>
 
     <div class="overlay-container">
@@ -243,6 +275,8 @@
    <!-- <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>-->
     <script src="https://unpkg.com/elm-pep@1.0.6/dist/elm-pep.js"></script>
     <script type="module" src="main.js"></script>
+    <script type="text/javascript" src="Configuration/configurations.js"></script>
+    <script type="stylesheet" src="Configuration/configurations.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/elm-pep@1.0.6/dist/elm-pep.js"></script>
     
   </body>
