@@ -54,6 +54,9 @@ The initial, ambitious plan of the development team was to relay the data of a c
 - [Felipe Vasquez](https://github.com/f-vasquez-tavera)
 - [Ataullah Eliacy](https://github.com/Ataeliacy)
 ## Acknowledgement
+Bundesamt für Strahlenschutz
+- Monitors radiation in Germany
+- Provides public geoportal with hourly updated data
 ## Attributions
 TODO More attributions?
 - pygeoapi is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/). This project provides an example of its implementation with modified parameters and no changes to the source code. The exact installation used can be seen in the /pygeoapi folder of this repository.
