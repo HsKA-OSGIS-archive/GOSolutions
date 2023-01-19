@@ -19,6 +19,15 @@ import  Group from 'ol/layer/Group';
 
 
 
+
+//configuration
+
+//const config = require("config");
+//const server_URL = config.get("main.server_url");
+//const collection = config.get("main.collection");
+
+console.log(server_URL+collection+itemscount);
+
 const map = new Map({
   view: new View({
     center: [1000000, 6580000],
@@ -49,7 +58,7 @@ const blueMarble = new TileLayer({
 
 //creating a Vectorlayer out of the ODL hourly gamma doese rate features 
 (async () => {
-  const odl_features = await fetch('http://localhost:5000/collections/ODL/items?limit=1500', {
+  const odl_features = await fetch(server_URL+collection+"items?limit="+itemscount, {
     headers: {
       'Accept': 'application/json'
     }
@@ -188,7 +197,9 @@ style: function(feature, resolution){
     } else {
         return [morethan06];
     }
-}});
+}
+
+});
 //adding of the Vector Layer to the Map
 map.addLayer(layerFeature);
 
@@ -218,6 +229,7 @@ map.on('click', function(e){
         let pointFeatureValue = String("Total Value: ") + feature.get('value'); 
         let pointFeatureValueC = String("Cosmic Value: ") +feature.get('value_cosmic'); 
         let pointFeatureValueT = String("Terrestrial Value: ") +feature.get('value_terrestrial'); 
+        
         overlayLayer.setPosition(pointFeatureCoord);
         overlayFeatureUnit.innerHTML = pointFeatureUnit; 
         overlayFeatureValue.innerHTML = pointFeatureValue;  
@@ -245,6 +257,6 @@ for (let baselayerElement of baselayerElements){
     })
 
     
-}
+};
 
-
+//Display the timeslot
