@@ -1,9 +1,22 @@
 # GOSolutions
 *A web app for visualizing Geographic info using OGC-API standards using pygeoapi and OpenLayers*
 ## Overview
-This is the result of a project for the Open Source GIS course as parts of the Geomatics MSc, run by the [Karlsruhe University of Applied Sciences](https://www.h-ka.de/). The project as a whole was to explore the new features and possibilities offered by the new [OGC API](https://ogcapi.ogc.org/) framework, a new standard based on [OpenAPI](https://www.openapis.org/) which is succeeding the old [OWS](https://www.ogc.org/standards/owc) standard for geo APIs. The back-end was developed using [pygeoapi](https://pygeoapi.io/), the front-end uses the [OpenLayers](https://openlayers.org/) framework. Example data was obtained from an OWS service of Radiological Data hosted by the German [Bundesamt fuer Strahlenschutz](https://www.imis.bfs.de/geoportal/), which in turn was converted for hosting on our API using [GDAL/OGR](https://gdal.org/).
+This is the result of a project for the Open Source GIS course during the Winter 2022 semester as part of the Geomatics MSc, run by the [Karlsruhe University of Applied Sciences](https://www.h-ka.de/). The project as a whole aimed to explore the new features and possibilities offered by the new [OGC API](https://ogcapi.ogc.org/) framework, a new standard based on [OpenAPI](https://www.openapis.org/) which is succeeding the old [OWS](https://www.ogc.org/standards/owc) standard for geo APIs. The back-end was developed using [pygeoapi](https://pygeoapi.io/), the front-end using the [OpenLayers](https://openlayers.org/) framework. Example data was obtained from an OWS service of Radiological Data hosted by the German [Bundesamt fuer Strahlenschutz](https://www.imis.bfs.de/geoportal/), which in turn was converted for hosting on our API using [GDAL/OGR](https://gdal.org/).
 ## Project Files
-List of files goes here
+.
+|-- index.html
+|-- main.js
+|-- package-lock.json
+|-- package.json
+|-- readme.md
+|-- style.css
+|-- vite.config.js
+|-- media
+    |-- legend.jpeg
+    |-- logo.png
+    |-- logo2.png
+
+
 ## Installation
 NOT FINAL -- Subject to changes based on final build.
 ### Requirements
@@ -34,6 +47,7 @@ The initial concept of this project has remained largely unchanged since its inc
 ### Initial Scope
 The initial, ambitious plan of the development team was to relay the data of a complete OWS server to an OpenLayers front end. This was 
 ### Hosting on Geoserver
+## Further Improvements/How to contribute
 ## Authors
 - [Max Kirsch](https://github.com/Max25832)
 - [Caden Wells](https://github.com/CaLWells)
