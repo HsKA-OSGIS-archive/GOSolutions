@@ -40,11 +40,17 @@ To host this project locally:
 
 2. Download the correct gdal wheel file for your specific version of python and operating system from [Christoph Gohlke's website](https://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal).
 
-3. Navigate in console to the location of the wheel file from the previous step, and install with the following command:```bash
-python -m pip install path-to-wheel-file.whl```
+3. Navigate in console to the location of the wheel file from the previous step, and install with the following command:
 
-4. Launch the server with ```bash
-pygeoapi serve```
+```bash
+python -m pip install path-to-wheel-file.whl
+```
+
+4. Launch the server.
+
+```bash
+pygeoapi serve
+```
 
 5. If you experience difficulty installing pygeoapi, there exist preconfigured virtual environments with pygeoapi already installed such as [OSGeoLive](http://live.osgeo.org/de/overview/pygeoapi_overview.html) or [Docker](https://docs.pygeoapi.io/en/latest/running-with-docker.html) which may be more accessible. Feel free to experiment.
 
