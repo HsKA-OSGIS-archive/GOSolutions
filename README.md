@@ -29,7 +29,11 @@ The back end of this project can be edited in the ```config-example.yml``` of yo
 
 The front end of this project should work with any data hosted on an OGC API. Simply change the parameters found in ```config.js```.
 ## Project Documentation
-Describe development process here
+### Concept
+The initial concept of this project has remained largely unchanged since its inception: To explore the current possibilities of OGC API standards by rehosting (or relaying) publicly available OWS features and displaying them via OpenLayers. The scope and technologies used of the project have however undergone several revisions.
+### Initial Scope
+The initial, ambitious plan of the development team was to relay the data of a complete OWS server to an OpenLayers front end. This was 
+### Hosting on Geoserver
 ## Authors
 - [Max Kirsch](https://github.com/Max25832)
 - [Caden Wells](https://github.com/CaLWells)
@@ -37,8 +41,9 @@ Describe development process here
 - [Ataullah Eliacy](https://github.com/Ataeliacy)
 ## Acknowledgement
 ## Attributions
+TODO More attributions?
 - pygeoapi is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/). This project provides an example of its implementation with modified parameters and no changes to the source code. The exact installation used can be seen in the /pygeoapi folder of this repository.
-- OpenLayers is licensed under a [BSD 2-Clause "Simplified" License](https://github.com/openlayers/openlayers/blob/main/LICENSE.md)
+- OpenLayers is licensed under a [BSD 2-Clause "Simplified" License](https://github.com/openlayers/openlayers/blob/main/LICENSE.md).
 ## License
 BSD 2-Clause License
 
