@@ -12,7 +12,7 @@ This is the result of a project for the Open Source GIS course during the Winter
 |-- style.css  
 |-- vite.config.js  
 |-- media  
-      |-- legend.jpeg  
+#       |-- legend.jpeg  
       |-- logo.png  
       |-- logo2.png    
 
