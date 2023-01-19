@@ -45,7 +45,7 @@ The front end of this project should work with any data hosted on an OGC API. Si
 ### Concept
 The initial concept of this project has remained largely unchanged since its inception: To explore the current possibilities of OGC API standards by rehosting (or relaying) publicly available OWS features and displaying them via OpenLayers. The scope and technologies used of the project have however undergone several revisions.
 ### Initial Scope
-The initial, ambitious plan of the development team was to relay the data of a complete OWS server to an OpenLayers front end. This was 
+The initial, ambitious plan of the development team was to relay the data of a complete OWS server to an OpenLayers front end. This was quickly revised to provide a simple proof of concept through displaying one layer in OpenLayers.
 ### Hosting on Geoserver
 Hosting on Geoserver did not work for us within the time scope of the project. There was an issue with the v2.23 'Snapshot' build of Geoserver which didn't allow for OWS feature layer fetching did not work. However the OGC API module could only be installed in this 2.23 build. We submitted a bug report, but it was not yet fixed at the time of this project's conclusion. We therefore switched to pygeoapi, which is designed directly for OGC API implementation. In the future, however, once this bug is fixed, then this project should alo be able to work with Geoserver. 
 ## Further Improvements/How to contribute
@@ -62,6 +62,7 @@ Bundesamt für Strahlenschutz
 TODO More attributions?
 - pygeoapi is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/). This project provides an example of its implementation with modified parameters and no changes to the source code. The exact installation used can be seen in the /pygeoapi folder of this repository.
 - OpenLayers is licensed under a [BSD 2-Clause "Simplified" License](https://github.com/openlayers/openlayers/blob/main/LICENSE.md).
+- BfS is licesnsed under the [Ordinance on the determination of the terms of use for the provision of federal geodata](http://www.gesetze-im-internet.de/geonutzv/), as well as [Data License Germany - Attribution - Version 2.0](https://www.govdata.de/dl-de/by-2-0).
 ## License
 BSD 2-Clause License
 
