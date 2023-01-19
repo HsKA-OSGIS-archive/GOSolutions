@@ -3,7 +3,7 @@
 ## Overview
 This is the result of a project for the Open Source GIS course during the Winter 2022 semester as part of the Geomatics MSc, run by the [Karlsruhe University of Applied Sciences](https://www.h-ka.de/). The project as a whole aimed to explore the new features and possibilities offered by the new [OGC API](https://ogcapi.ogc.org/) framework, a new standard based on [OpenAPI](https://www.openapis.org/) which is succeeding the old [OWS](https://www.ogc.org/standards/owc) standard for geo APIs. The back-end was developed using [pygeoapi](https://pygeoapi.io/), the front-end using the [OpenLayers](https://openlayers.org/) framework. Example data was obtained from an OWS service of Radiological Data hosted by the German [Bundesamt fuer Strahlenschutz](https://www.imis.bfs.de/geoportal/), which in turn was converted for hosting on our API using [GDAL/OGR](https://gdal.org/).
 ## Project Files
-.
+.  
 |-- index.html  
 |-- main.js  
 |-- package-lock.json  
@@ -12,7 +12,7 @@ This is the result of a project for the Open Source GIS course during the Winter
 |-- style.css  
 |-- vite.config.js  
 |-- media  
-#       |-- legend.jpeg  
+      emsp |-- legend.jpeg  
       |-- logo.png  
       |-- logo2.png    
 
