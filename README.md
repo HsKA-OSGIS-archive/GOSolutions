@@ -12,9 +12,9 @@ This is the result of a project for the Open Source GIS course during the Winter
 |-- style.css  
 |-- vite.config.js  
 |-- media  
-      &emsp; |-- legend.jpeg  
-      &emsp; |-- logo.png  
-      &emsp; |-- logo2.png    
+      &emsp;|-- legend.jpeg  
+      &emsp;|-- logo.png  
+      &emsp;|-- logo2.png    
 
 
 ## Installation
