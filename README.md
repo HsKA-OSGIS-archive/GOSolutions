@@ -47,6 +47,7 @@ The initial concept of this project has remained largely unchanged since its inc
 ### Initial Scope
 The initial, ambitious plan of the development team was to relay the data of a complete OWS server to an OpenLayers front end. This was 
 ### Hosting on Geoserver
+Hosting on Geoserver did not work for us within the time scope of the project. There was an issue with the v2.23 'Snapshot' build of Geoserver which didn't allow for OWS feature layer fetching did not work. However the OGC API module could only be installed in this 2.23 build. We submitted a bug report, but it was not yet fixed at the time of this project's conclusion. We therefore switched to pygeoapi, which is designed directly for OGC API implementation. In the future, however, once this bug is fixed, then this project should alo be able to work with Geoserver. 
 ## Further Improvements/How to contribute
 ## Authors
 - [Max Kirsch](https://github.com/Max25832)
