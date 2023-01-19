@@ -58,6 +58,8 @@ pygeoapi serve
 
 Instructions go here. Describe how the front end should be able to work with any OGC API
 
+IMPORTANT: The current implementation of this server with the resources provided requires the use of the [CORS Plugin](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en). This also requires setting the ```cors``` parameter to "true" in the ```config-example.yml``` file of pygeoapi.
+
 ## How to Use
 
 The back end of this project can be edited in the ```config-example.yml``` of your pygeoapi installation. You can find the documentation of how to use that [here](https://docs.pygeoapi.io/en/latest/)
