@@ -4,7 +4,7 @@ A web app for visualizing Geographic info using OGC-API standards using pygeoapi
 
 ## Overview
 
-This is the result of a project for the Open Source GIS course during the Winter 2022 semester as part of the Geomatics MSc, run by the [Karlsruhe University of Applied Sciences](https://www.h-ka.de/). The project as a whole aimed to explore the new features and possibilities offered by the new [OGC API](https://ogcapi.ogc.org/) framework, a new standard based on [OpenAPI](https://www.openapis.org/) which is succeeding the old [OWS](https://www.ogc.org/standards/owc) standard for geo APIs. The back-end was developed using [pygeoapi](https://pygeoapi.io/), the front-end using the [OpenLayers](https://openlayers.org/) framework. Example data was obtained from an OWS service of Radiological Data hosted by the German [Bundesamt fuer Strahlenschutz](https://www.imis.bfs.de/geoportal/), which in turn was converted for hosting on our API using [GDAL/OGR](https://gdal.org/).
+This is the result of a project for the Open Source GIS course during the Winter 2022 semester as part of the Geomatics MSc, run by the [Karlsruhe University of Applied Sciences](https://www.h-ka.de/). The project as a whole aimed to explore the new features and possibilities offered by the new [OGC API](https://ogcapi.ogc.org/) framework, a new standard based on [OpenAPI](https://www.openapis.org/) which is succeeding the old [OWS](https://www.ogc.org/standards/owc) standard for geo APIs. The back-end was developed using [pygeoapi](https://pygeoapi.io/), the front-end using the [OpenLayers](https://openlayers.org/) framework. Example data was obtained from an OWS service of Radiological Data hosted by the German [Bundesamt fuer Strahlenschutz](https://www.imis.bfs.de/geoportal/) (BfS), which in turn was converted for hosting on our API using [GDAL/OGR](https://gdal.org/).
 
 ## Project Files
 
@@ -40,13 +40,11 @@ To host this project locally:
 
 2. Download the correct gdal wheel file for your specific version of python and operating system from [Christoph Gohlke's website](https://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal).
 
-3. Navigate in console to the location of the wheel file from the previous step, and install with the following command:
+3. Navigate in console to the location of the wheel file from the previous step, and install with the following command:```bash
+python -m pip install path-to-wheel-file.whl```
 
-```bash
-python -m pip install path-to-wheel-file.whl
-```
-
-4. Launch the server
+4. Launch the server with ```bash
+pygeoapi serve```
 
 5. If you experience difficulty installing pygeoapi, there exist preconfigured virtual environments with pygeoapi already installed such as [OSGeoLive](http://live.osgeo.org/de/overview/pygeoapi_overview.html) or [Docker](https://docs.pygeoapi.io/en/latest/running-with-docker.html) which may be more accessible. Feel free to experiment.
 
@@ -58,7 +56,7 @@ Instructions go here. Describe how the front end should be able to work with any
 
 The back end of this project can be edited in the ```config-example.yml``` of your pygeoapi installation. You can find the documentation of how to use that [here](https://docs.pygeoapi.io/en/latest/)
 
-The front end of this project should work with any data hosted on an OGC API. Simply change the parameters found in ```config/configurations.js```.
+The front end of this project should work with any data hosted on an OGC API. Simply change the parameters found in ```config/configurations.js```. The variable ```server_url``` refers to a server publishing with an OGC API up to the word "collections", and the variable ```collection``` refers to the name of the collection that you wish to display.
 
 ## Project Documentation
 
@@ -68,13 +66,19 @@ The initial concept of this project has remained largely unchanged since its inc
 
 ### Initial Scope
 
-The initial, ambitious plan of the development team was to relay the data of a complete OWS server to an OpenLayers front end. This was quickly revised to provide a simple proof of concept through displaying one layer in OpenLayers.
+The initial, ambitious plan of the development team was to relay the data of a complete OWS server to an OpenLayers front end. This was quickly revised to provide a simple proof of concept through displaying one layer in OpenLayers. With the tech stack defined and the pipeline established, this project's ideal form would be a multi-featured demonstration of the capabilities of the OGC API.
 
 ### Hosting on Geoserver
 
-Hosting on Geoserver did not work for us within the time scope of the project. There was an issue with the v2.23 'Snapshot' build of Geoserver which didn't allow for OWS feature layer fetching did not work. However the OGC API module could only be installed in this 2.23 build. We submitted a bug report, but it was not yet fixed at the time of this project's conclusion. We therefore switched to pygeoapi, which is designed directly for OGC API implementation. In the future, however, once this bug is fixed, then this project should alo be able to work with Geoserver.
+This project was originally planned to be hosted using [Geoserver](https://geoserver.org/), which has a community built [OGC API Module](https://docs.geoserver.org/latest/en/user/community/ogc-api/index.html) which allows for the publishing of geodata in an OGC API compatible format. The Geoserver was installed on a virtual machine running [OSGeoLive](https://sourceforge.net/projects/osgeo-live/files/14.0/): A collection of geodata tools running on a Ubuntu platform maintained by [OSGeo](https://www.osgeo.org/): The Open Source Geospatial Foundation.
+
+OSGeoLive 14 ships with an older version of Geoserver which does not support the OGC API module, and so instead a Web Archive version of the latest nightly build Geoserver was directly launched on an Apache Tomcat server. The OGC API module was then installed on top of this version of Geoserver, which did correctly provide the relevant APIs. However, the nightly build of Geoserver (v2.23) contained a [bug](https://osgeo-org.atlassian.net/browse/GEOS-10794) that prevents the use of a WFS as a data source. To overcome this, we downloaded a sample feature from the BfS in GeoJSON format, converted this to a Geopackage using [QGIS](https://www.qgis.org/en/site/) desktop GIS software, and hosted this on the server, which worked for some time. Later on, new updates also broke the compatibility of Geoserver with the OGC API module, however, when all bugs have been resolved, the front end available in this repository should work with Geoserver-hosted OGC APIs, as well as any other OGC API for that matter.
 
 ## Further Improvements/How to contribute
+
+Contributions are always welcome, please leave a pull request explaining any changes done, and one of the team members will respond as soon as possible.
+
+This repository lacks front-end features, flexible styling, and would benefit from the integration of a way to handle a complex OWS service with multiple feature collections. The main.js and configurations.js files could be changed to allow for multiple custom collections and features to be displayed. Similarly, updates as more OGC API features become available for public use could be of benefit.
 
 ## Authors
 
@@ -83,9 +87,9 @@ Hosting on Geoserver did not work for us within the time scope of the project. T
 - [Felipe Vasquez](https://github.com/f-vasquez-tavera)
 - [Ataullah Eliacy](https://github.com/Ataeliacy)
 
-## Acknowledgement
+## Acknowledgements
 
-Bundesamt für Strahlenschutz
+Bundesamt für Strahlenschutz for use of their [Geoportal](https://www.imis.bfs.de/geoportal/)
 
 - Monitors radiation in Germany
 - Provides public geoportal with hourly updated data
