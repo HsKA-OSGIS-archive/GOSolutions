@@ -20,7 +20,7 @@ This is the result of a project for the Open Source GIS course during the Winter
       &emsp;|-- legend.jpeg  
       &emsp;|-- logo.png  
       &emsp;|-- logo2.png  
-|-- media
+|-- config  
       &emsp;|-- configurations.js
 
 ## Installation
