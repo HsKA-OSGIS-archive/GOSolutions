@@ -45,7 +45,7 @@ set PYGEOAPI_OPENAPI= gosolution-openapi.yml
 pygeoapi openapi generate $PYGEOAPI_CONFIG > $PYGEOAPI_OPENAPI
 ```
 
-pygeoapi requires OGR to use data hosted from a WFS, so using this repository's ```gosolutions-config.yml``` will cause an error without it.
+pygeoapi requires OGR to use data hosted from a WFS, so using this repository's ```gosolution-config.yml``` will cause an error without it.
 
 2. Download the correct gdal wheel file for your specific version of python and operating system from [Christoph Gohlke's website](https://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal).
 
