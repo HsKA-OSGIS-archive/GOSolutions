@@ -36,7 +36,16 @@ Follow installation instructions of Back-end or Front-end as necessary
 
 To host this project locally:
 
-1. Follow the "Install in 5 minutes" [guide](http://pygeoapi.io/) for pygeoapi, but don't change the ```config-example.yml```. Instead, use the ```config-example.yml``` provided in this directory, but don't run the server yet. pygeoapi requires OGR to use data hosted from a WFS, so using this repository's ```config-example.yml``` will cause an error without it.
+1. Follow the "Install in 5 minutes" [guide](http://pygeoapi.io/) for pygeoapi, but don't change the ```config-example.yml```. Instead,download the ```gosolution-config.yml``` from our github and drop it inside your pygeoapi folder. On the command control Navigate into the folder ```Scribt``` and type ```activate```! 
+
+Then the following: 
+
+```set PYGEOAPI_CONFIG=gosolution-config.yml 
+set PYGEOAPI_OPENAPI= gosolution-openapi.yml
+pygeoapi openapi generate $PYGEOAPI_CONFIG > $PYGEOAPI_OPENAPI
+```
+
+pygeoapi requires OGR to use data hosted from a WFS, so using this repository's ```gosolutions-config.yml``` will cause an error without it.
 
 2. Download the correct gdal wheel file for your specific version of python and operating system from [Christoph Gohlke's website](https://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal).
 
@@ -56,7 +65,9 @@ pygeoapi serve
 
 ### Front End
 
-Instructions go here. Describe how the front end should be able to work with any OGC API
+To get the front end running pull the ```gosolutions-app``` folder from the repository. Then navigate on the comand controll of your computer into the folder and run ```npm start```.
+
+To display any other OGC API features, just change the variables in the ```configurations.js``` file. 
 
 IMPORTANT: The current implementation of this server with the resources provided requires the use of the [CORS Plugin](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en). This also requires setting the ```cors``` parameter to "true" in the ```config-example.yml``` file of pygeoapi.
 
